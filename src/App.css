@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+
+#root,
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  line-height: 42px;
+  color: #ffffff;
+}
+
+.app {
+  height: 100%;
+  display: flex;
+  padding: 0 2em;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #ee82ee, #00bcd4, #00bcd4, #ee82ee);
+  background-size: 800% 800%;
+  animation: gradient 30s ease infinite;
+}
+
+/** Backgorund squares */
+
+.squares {
+  position: absolute;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+.squares span {
+  position: absolute;
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.1);
+  animation: animate 10s linear infinite;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/** Quote container */
+
+.card {
+  width: 700px;
+  height: auto;
+  padding: 2em;
+  font-size: 0.9em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  z-index: 100;
+}
+
+/** Advice text */
+
+.heading {
+  margin-right: 2em;
+  margin-left: 2em;
+  font-weight: 100;
+}
+
+/** Advice btn */
+
+button {
+  background: #fff;
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 1em;
+  align-self: flex-end;
+  border: none;
+  border-radius: 35px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+/** Social media buttons */
+
+.socials {
+  align-self: flex-start;
+  position: absolute;
+  bottom: -35px;
+  display: flex;
+}
+
+.socials li {
+  margin-right: 2em;
+}
+
+/** Copy to clipboard button */
+
+.quotation {
+  position: absolute;
+  top: -35px;
+  left: 20px;
+}
+
+.quotation ul li a {
+  width: 50px;
+  height: 50px;
+}
+
+/** Buttons animation */
+
+@keyframes animate {
+  0% {
+    transform: scale(0) translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(-500%) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/** Background animation */
+
+@keyframes gradient {
+  0% {
+    background-position: 50% 0%;
+  }
+
+  50% {
+    background-position: 50% 100%;
+  }
+
+  100% {
+    background-position: 50% 0%;
+  }
+}
+
+/** Media queries */
+
+@media screen and (max-width: 500px) {
+  .card {
+    padding-bottom: 4em;
+  }
+  button {
+    align-self: unset;
+  }
+}
