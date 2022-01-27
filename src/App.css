@@ -3,19 +3,19 @@
 #root,
 html,
 body {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
   height: 100vh;
+  margin: 0;
+  padding: 0;
   font-family: "Roboto", sans-serif;
   line-height: 42px;
+  box-sizing: border-box;
   color: #ffffff;
 }
 
 .app {
   height: 100%;
-  display: flex;
   padding: 0 2em;
+  display: flex;
   justify-content: center;
   align-items: center;
   background: linear-gradient(180deg, #ee82ee, #00bcd4, #00bcd4, #ee82ee);
@@ -26,19 +26,19 @@ body {
 /** Backgorund squares */
 
 .squares {
-  position: absolute;
-  overflow: hidden;
   height: 100vh;
   width: 100vw;
+  position: absolute;
+  overflow: hidden;
 }
 
 .squares span {
   position: absolute;
-  pointer-events: none;
   background: rgba(255, 255, 255, 0.1);
-  animation: animate 10s linear infinite;
-  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  pointer-events: none;
+  animation: reflection 10s linear infinite;
 }
 
 /** Quote container */
@@ -47,11 +47,11 @@ body {
   width: 700px;
   height: auto;
   padding: 2em;
-  font-size: 0.9em;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  font-size: 0.9em;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-right: 1px solid rgba(255, 255, 255, 0.2);
@@ -73,14 +73,14 @@ body {
 /** Advice btn */
 
 button {
+  margin-top: 1em;
+  padding: 1em 2em;
+  align-self: flex-end;
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
   background: #fff;
   color: #666;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-size: 1em;
-  padding: 1em 2em;
-  margin-top: 1em;
-  align-self: flex-end;
   border: none;
   border-radius: 35px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -90,10 +90,10 @@ button {
 /** Social media buttons */
 
 .socials {
-  align-self: flex-start;
   position: absolute;
   bottom: -35px;
   display: flex;
+  align-self: flex-start;
 }
 
 .socials li {
@@ -115,7 +115,7 @@ button {
 
 /** Buttons animation */
 
-@keyframes animate {
+@keyframes reflection {
   0% {
     transform: scale(0) translateY(0) rotate(0deg);
     opacity: 0;

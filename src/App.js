@@ -1,4 +1,5 @@
 /* eslint-disable no-restricted-globals */
+
 import React from "react";
 import axios from "axios";
 
@@ -17,6 +18,7 @@ class App extends React.Component {
     setInterval(this.crateSquare, 150);
   }
 
+  //Getting advice from API
   fetchAdvice = () => {
     axios
       .get("https://api.adviceslip.com/advice")
@@ -29,6 +31,7 @@ class App extends React.Component {
       });
   };
 
+  //Copies advice to clipboard
   copyToClipBoard() {
     var aux = document.createElement("input");
 
@@ -45,6 +48,7 @@ class App extends React.Component {
     alert("Text Copied!");
   }
 
+  //Creates background squares
   crateSquare() {
     const squares = document.getElementById("squares");
     const square = document.createElement("span");
@@ -62,6 +66,11 @@ class App extends React.Component {
     setTimeout(() => {
       square.remove();
     }, 10000);
+  }
+  isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
   }
 
   render() {
