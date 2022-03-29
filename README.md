@@ -1,3 +1,14 @@
-Responsive react app that displays a random quote from the following URL:
 
-https://api.adviceslip.com/advice
+# RANDOM QUOTE GENERATOR
+
+Responsive react app that displays a random quote from:
+
+
+
+
+ - [Random quote API](https://api.adviceslip.com/advice)
+
+
+## Authors
+
+- [@VZAvaro23](https://github.com/VZAlvaro23)
